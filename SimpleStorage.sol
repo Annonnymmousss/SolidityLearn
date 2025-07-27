@@ -22,6 +22,14 @@ contract SimpleStorage {
         name : annonnymmousss
     });
 
+    Person public pat1 = Person({
+        number : 8 ,
+        name : annonnymmousss1
+    });
+
+    //other than declaring thing again and again u can use dynamic list of your custtom datatype
+
+    Person[] public listOfPerson;
     //view,pure
     function retrieve() public view returns (uint256) {     //it can only return smtg which is to view only u cannot add changes or edit things in it 
         return FavouriteNumber;
