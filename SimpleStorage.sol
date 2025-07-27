@@ -8,4 +8,9 @@ contract SimpleStorage {
     function store(uint256 _FavouriteNumber)public { //every smart contract has its own unique address
         FavouriteNumber = _FavouriteNumber;
     }
+
+    //view,pure
+    function retrieve() public view returns (uint256) {     //it can only return smtg which is to view only u cannot add changes or edit things in it 
+        return FavouriteNumber;
+    }
 }
