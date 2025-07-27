@@ -29,9 +29,13 @@ contract SimpleStorage {
 
     //other than declaring thing again and again u can use dynamic list of your custtom datatype
 
-    Person[] public listOfPerson;
+    Person[/*size*/] public listOfPerson;
     //view,pure
     function retrieve() public view returns (uint256) {     //it can only return smtg which is to view only u cannot add changes or edit things in it 
         return FavouriteNumber;
+    }
+
+    function addPerson(string memory _name , uint256 memory _number) public {
+        listOfPerson.push(Person(_number , _name));
     }
 }
