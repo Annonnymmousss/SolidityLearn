@@ -13,6 +13,8 @@ contract SimpleStorage {
 
     struct Person{
         uint256 number;
+
+        
         string name;
     }
 
