@@ -4,9 +4,9 @@ pragma solidity 0.8.19; //this is solidity version
 contract SimpleStorage {
     //by default variable declaration is internal
     // if u have to store smtg which is visible outside the contract u should make it public
-    uint256 public FavouriteNumber; //0
+    uint256 public FavouriteNumber; //0,   automatically a storage variable as outside the function but inside a contract
 
-    uint256[] listofFavouriteNumber; //list
+    uint256[] listofFavouriteNumber; //list 
     function store(uint256 _FavouriteNumber)public { //every smart contract has its own unique address
         FavouriteNumber = _FavouriteNumber;
     }
@@ -14,7 +14,7 @@ contract SimpleStorage {
     struct Person{
         uint256 number;
 
-        
+
         string name;
     }
 
@@ -37,6 +37,10 @@ contract SimpleStorage {
         return FavouriteNumber;
     }
 
+
+    //memomry, storage, calldata
+
+    //memory and calldata both are temporary but memory is mutable but calldata isnt
     function addPerson(string memory _name , uint256 memory _number) public {
         listOfPerson.push(Person(_number , _name));
     }
