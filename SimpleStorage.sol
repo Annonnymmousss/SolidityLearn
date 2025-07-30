@@ -10,7 +10,7 @@ contract SimpleStorage {
     function store(uint256 _FavouriteNumber)public { //every smart contract has its own unique address
         FavouriteNumber = _FavouriteNumber;
     }
-
+    
     struct Person{
         uint256 number;
 
@@ -32,6 +32,8 @@ contract SimpleStorage {
     //other than declaring thing again and again u can use dynamic list of your custtom datatype
 
     Person[/*size*/] public listOfPerson;
+
+    mapping (string=>uint256) public nameToFavouriteNo;
     //view,pure
     function retrieve() public view returns (uint256) {     //it can only return smtg which is to view only u cannot add changes or edit things in it 
         return FavouriteNumber;
@@ -43,5 +45,6 @@ contract SimpleStorage {
     //memory and calldata both are temporary but memory is mutable but calldata isnt
     function addPerson(string memory _name , uint256 memory _number) public {
         listOfPerson.push(Person(_number , _name));
+        nameToFavouriteNo[_name] = _number
     }
 }
