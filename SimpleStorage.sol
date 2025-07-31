@@ -33,7 +33,8 @@ contract SimpleStorage {
 
     Person[/*size*/] public listOfPerson;
 
-    mapping (string=>uint256) public nameToFavouriteNo;
+
+    mapping (string=>uint256) public nameToFavouriteNo; //by default string is attached to 0 
     //view,pure
     function retrieve() public view returns (uint256) {     //it can only return smtg which is to view only u cannot add changes or edit things in it 
         return FavouriteNumber;
