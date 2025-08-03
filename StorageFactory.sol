@@ -50,7 +50,6 @@ contract SimpleStorage {
     }
 }
 
-
 contract StorageFactory{
     SimpleStorage public simpleStorage;
     function createSimpleStorageContract() public {
