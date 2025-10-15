@@ -5,8 +5,9 @@ import {Test, console} from "forge-std/Test.sol";
 import {FundMe} from "../src/FundMe.sol";
 
 contract FundMeTest is Test {
-    FundMe fundMe = new FundMe();
+    FundMe fundMe ;
     function setUp() external{
+        fundMe = new FundMe();
         console.log("vzxvsxvxz");
         
     }
